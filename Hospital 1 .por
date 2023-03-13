@@ -1,5 +1,5 @@
 programa
-{		logico  quartos[20]
+{		logico  quartos[20]
 		inteiro resposta = 0, totalConsultas = 0, faturamentoConsulta = 0, quarto = 0, totalInternacoes = 0,
 		faturamentoInternacoes = 0, faturamentoTotal = 0
 		cadeia nome, telefone, especMedica 
@@ -48,6 +48,7 @@ programa
 
 			escreva("Especialidade desejada:")
 			leia(especMedica)
+			totalConsultas++
 
 			se(especMedica == "Pediatria" ou especMedica == "pediatria"){
 					faturamentoConsulta += 150
@@ -98,6 +99,10 @@ programa
 		}
 			
 		funcao faturamento(){
+
+			limpa()
+
+			faturamentoTotal = faturamentoConsulta + faturamentoInternacoes
 			
 			escreva("Numero de consultas:", totalConsultas, "\n")
 			escreva("Total de internações:", totalInternacoes, "\n")
@@ -127,7 +132,7 @@ programa
  * Esta seção do arquivo guarda informações do Portugol Studio.
  * Você pode apagá-la se estiver utilizando outro editor.
  * 
- * @POSICAO-CURSOR = 1732; 
+ * @POSICAO-CURSOR = 602; 
  * @PONTOS-DE-PARADA = ;
  * @SIMBOLOS-INSPECIONADOS = ;
  * @FILTRO-ARVORE-TIPOS-DE-DADO = inteiro, real, logico, cadeia, caracter, vazio;
